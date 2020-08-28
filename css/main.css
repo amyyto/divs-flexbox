@@ -97,7 +97,7 @@ textarea {
 
 
 html {
-  background-color: #fff;
+  background-color: #b08a79;
   height: 100%;
 }
 
@@ -110,24 +110,25 @@ body {
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #fff;
-  line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  height: 300px;
-  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  color: #fff;
+  line-height: 1.5em;
+  font-size: 1.25em;
+  background-color: inherit;
+  height: 300px;
 
+}
 
 
 
@@ -210,6 +211,16 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+   @media all and (min-width: 1200px) {
+       .div-1, .div-2, .div-3 {
+         flex-basis: 30%;
+       }
+
+       .div-1, .div-2 {
+         border-right: 1px solid #555;
+         padding-right: 30px;
+       }
+   }
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
